@@ -15,8 +15,8 @@ class Asteroid(CircleShape):
     def update(self, dt):
         self.position += self.velocity * dt
 
-    def split(self):
-        self.kill()
+    def split(self):                                    # Splits the asteroid into smaller asteroids on hit. 
+        self.kill()                                     
 
         if self.radius <= ASTEROID_MIN_RADIUS:
             return
